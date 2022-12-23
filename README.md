@@ -1,6 +1,8 @@
 # CS622 FINAL PROJECT  - WEB CRAWLER
 ##### Author: Jared Baca
 
+Watch the video walkthrough [here](https://youtu.be/4fIpm_v3rPw)
+
 ## Overview
 This web application searches TikTok, Instagram, and YouTube for videos based on a keyword provided by the user. It downloads a given number of videos from each platform and displays them in a gallery view. The number of videos downloaded can be set in the Constants.java file. After downloading all available videos, it runs Py Scene Detect on each video and breaks it into shorter segments so that users can easily access individual scenes. These scenes appear in a separate video carousel when the "Scenes" button is clicked. This button appears once the scenes have been processed.
 
