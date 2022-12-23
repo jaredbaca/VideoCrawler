@@ -1,0 +1,1 @@
+const TT_VIDEOS = {video1: require('./TikTok/6962250117663509765.mp4'),video2: require('./TikTok/6962545582091160838.mp4'),video3: require('./TikTok/7029685984635751686.mp4'),}; export default TT_VIDEOS;

@@ -39,7 +39,7 @@ function SearchBar() {
     const [showGallery, setShowGallery] = useState(false);
     const [showSceneButton, setShowSceneButton] = useState(false);
     const [progress, setProgress] = useState("");
-    const [loading, setLoading] = useState(PROGRESS_MESSAGE);
+    const [loading, setLoading] = useState("Downloading TikTok Videos...");
 
 
     const handleSubmit = (e) =>{

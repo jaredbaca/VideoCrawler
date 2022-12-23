@@ -1,0 +1,1 @@
+const IG_SCENES = [{scene1: require('./Instagram/scenes_CBDyWTUnoGs.mp4/CBDyWTUnoGs-Scene-001.mp4'),},{scene2: require('./Instagram/scenes_CBiq7xUnIFg.mp4/CBiq7xUnIFg-Scene-001.mp4'),},{scene3: require('./Instagram/scenes_CBtFcUKjBxR.mp4/CBtFcUKjBxR-Scene-001.mp4'),},]; export default IG_SCENES;

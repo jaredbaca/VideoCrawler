@@ -1,0 +1,1 @@
+const TT_SCENES = [{scene1: require('./TikTok/scenes_6962250117663509765.mp4/6962250117663509765-Scene-001.mp4'),},{scene1: require('./TikTok/scenes_6962545582091160838.mp4/6962545582091160838-Scene-001.mp4'),},{scene1: require('./TikTok/scenes_7029685984635751686.mp4/7029685984635751686-Scene-001.mp4'),},]; export default TT_SCENES;

@@ -1,0 +1,1 @@
+const YT_SCENES = [{scene1: require('./YouTube/scenes_M_2EbbK6-YA.mp4/M_2EbbK6-YA-Scene-001.mp4'),},{scene2: require('./YouTube/scenes__A9Dpu0hdtA.mp4/_A9Dpu0hdtA-Scene-001.mp4'),},{scene3: require('./YouTube/scenes_bdVxbD41lV4.mp4/bdVxbD41lV4-Scene-001.mp4'),},]; export default YT_SCENES;

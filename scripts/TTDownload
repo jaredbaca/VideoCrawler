@@ -27,7 +27,7 @@ do
 	COUNT=1
 	NAMES=""
 	yt-dlp -o "%(id)s.%(ext)s" $URL
-
+done
 
 # ----- Add filenames to React index file
 
@@ -40,8 +40,6 @@ do
 	done
 
 	echo $NAMES_TAG$NAMES$TAG > ../ttvids.js
-
-done
 
 echo "const PROGRESS_MESSAGE = \"\"; export default PROGRESS_MESSAGE;" > ../progress.js;
 

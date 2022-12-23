@@ -37,6 +37,7 @@ COUNT=1
 NAMES=""
 yt-dlp --max-filesize $3 -o "%(id)s.%(ext)s" -f mp4 $URL
 
+done
 
 # ----- Add filenames to React index file
 
@@ -50,7 +51,7 @@ then
 			echo $NAMES_TAG$NAMES$TAG > ../ytvids.js
 		done
 fi
-done
+
 
 echo "const PROGRESS_MESSAGE = \"\"; export default PROGRESS_MESSAGE;" > ../progress.js;
 

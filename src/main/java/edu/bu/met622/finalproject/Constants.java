@@ -27,8 +27,8 @@ public interface Constants {
 	//TikTok Search 
 	public static File TIKTOK_URLS = new File("scripts/tiktok_urls.txt");
 	public static String TIKTOK_SEARCH_URL = "https://www.tiktok.com/tag/";
-	public static int NUM_OF_RESULTS = 10;
-	public static String NUM_OF_RESULTS_STR = "15";
+	public static int NUM_OF_RESULTS = 3;
+	public static String NUM_OF_RESULTS_STR = "8";
 	
 	//Instagram Search
 	public static File INSTAGRAM_URLS = new File("scripts/instagram_urls.txt");
