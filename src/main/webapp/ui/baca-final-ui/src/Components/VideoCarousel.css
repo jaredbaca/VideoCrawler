@@ -1,0 +1,32 @@
+.carousel {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-controls-prev {
+    height: 300px;
+}
+
+.carousel-controls-next {
+    height: 300px;
+}
+
+.carousel .carousel-control-prev-icon {
+    visibility: hidden;
+}
+
+.carousel:hover .carousel-control-prev-icon {
+    visibility: visible;
+}
+
+.carousel .carousel-control-next-icon {
+    visibility: hidden;
+}
+
+.carousel:hover .carousel-control-next-icon {
+    visibility: visible;
+}

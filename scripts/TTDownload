@@ -1,0 +1,47 @@
+#! /bin/sh
+
+# ----- Variables
+
+
+TIKTOK_URLS=$(<scripts/tiktok_urls.txt)
+COUNT=1
+NAMES_TAG="const TT_VIDEOS = {"
+NAMES=""
+SCENE_NAMES="const TT_SCENES = ["
+FILENAMES=()
+TAG="}; export default TT_VIDEOS;"
+SCENES_TAG="]; export default TT_SCENES;"
+
+cd src/main/webapp/ui/baca-final-ui/src/videos/TikTok
+
+
+# ----- Set Progress Message
+
+echo "const PROGRESS_MESSAGE = \"Downloading TikTok Videos...\"; export default PROGRESS_MESSAGE;" > ../progress.js;
+
+
+# ----- Download TikTok Videos
+
+for URL in $TIKTOK_URLS
+do
+	COUNT=1
+	NAMES=""
+	yt-dlp -o "%(id)s.%(ext)s" $URL
+
+
+# ----- Add filenames to React index file
+
+	for FILE in *;
+	do
+		echo $FILE >> ../tt_filenames.txt
+		NAMES+="video$COUNT: require('./TikTok/$FILE')," 
+		COUNT=$((COUNT+1))
+
+	done
+
+	echo $NAMES_TAG$NAMES$TAG > ../ttvids.js
+
+done
+
+echo "const PROGRESS_MESSAGE = \"\"; export default PROGRESS_MESSAGE;" > ../progress.js;
+

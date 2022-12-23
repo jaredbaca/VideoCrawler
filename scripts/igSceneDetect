@@ -1,0 +1,54 @@
+#! /bin/bash
+
+# ----- Variables
+
+FILENAMES=()
+FILENAME=""
+URLS=()
+NAMES="const IG_VIDEOS = {"
+SCENE_NAMES="const IG_SCENES = ["
+TAG="}; export default IG_VIDEOS;"
+SCENES_TAG="]; export default IG_SCENES;"
+COUNT=1
+
+cd src/main/webapp/ui/baca-final-ui/src/videos
+
+
+# ----- Set Progress Message
+
+echo "const PROGRESS_MESSAGE = \"Analyzing Instagram Scenes...\"; export default PROGRESS_MESSAGE;" > ./progress.js;
+
+# ----- Run Scene Detect
+
+
+while read line;
+do
+
+if [[ $line != "*" ]] && [[ $line != "" ]];
+then
+	scenedetect -i Instagram/$line detect-adaptive --threshold 27 split-video -o Instagram/scenes_$line
+fi	
+
+
+SCENE_NAMES+="{"
+
+if [ "$(/bin/ls ./Instagram/scenes_$line)" ]; 
+then
+for FILE in Instagram/scenes_$line/*; 
+do 
+	SCENE_NAMES+="scene$COUNT: require('./Instagram/scenes_$line/$(/usr/bin/basename $FILE)'),"
+	COUNT=$((COUNT+1))
+done
+fi
+SCENE_NAMES+="},"
+
+
+
+done<ig_filenames.txt
+
+echo $SCENE_NAMES$SCENES_TAG > igscenes.js
+
+echo "const PROGRESS_MESSAGE = \"\"; export default PROGRESS_MESSAGE;" > ./progress.js;
+
+
+

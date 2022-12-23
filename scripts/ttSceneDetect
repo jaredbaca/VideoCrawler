@@ -1,0 +1,53 @@
+#! /bin/bash
+
+# ----- Variables
+
+FILENAMES=()
+FILENAME=""
+URLS=()
+NAMES="const TT_VIDEOS = {"
+SCENE_NAMES="const TT_SCENES = ["
+TAG="}; export default TT_VIDEOS;"
+SCENES_TAG="]; export default TT_SCENES;"
+COUNT=1
+
+cd src/main/webapp/ui/baca-final-ui/src/videos
+
+# ----- Set Progress Message
+
+echo "const PROGRESS_MESSAGE = \"Analyzing TikTok Scenes...\"; export default PROGRESS_MESSAGE;" > ./progress.js;
+
+# ----- Run Scene Detect
+
+
+while read line;
+do
+COUNT=1
+
+scenedetect -i TikTok/$line detect-adaptive --threshold 27 split-video -o TikTok/scenes_$line	
+
+SCENE_NAMES+="{"
+
+if [ "$(/bin/ls ./TikTok)" ]; 
+then
+for FILE in TikTok/scenes_$line/*; 
+do 
+	SCENE_NAMES+="scene$COUNT: require('./TikTok/scenes_$line/$(/usr/bin/basename $FILE)'),"
+	COUNT=$((COUNT+1))
+done
+fi
+
+SCENE_NAMES+="},"
+
+
+done<tt_filenames.txt
+
+echo $SCENE_NAMES$SCENES_TAG > ttscenes.js
+
+echo "const PROGRESS_MESSAGE = \"\"; export default PROGRESS_MESSAGE;" > ./progress.js;
+
+
+
+
+
+

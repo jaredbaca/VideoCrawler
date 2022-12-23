@@ -1,0 +1,57 @@
+#! /bin/bash
+
+# $1 is number of results
+# $2 is search term
+
+# ----- Variables
+
+FILENAMES=()
+FILENAME=""
+URLS=()
+NAMES_TAG="const IG_VIDEOS = {"
+NAMES=""
+SCENE_NAMES="const IG_SCENES = ["
+TAG="}; export default IG_VIDEOS;"
+SCENES_TAG="]; export default IG_SCENES;"
+COUNT=1
+
+cd src/main/webapp/ui/baca-final-ui/src/videos/Instagram
+
+
+# ----- Set Progress Message
+
+echo "const PROGRESS_MESSAGE = \"Downloading Instagram Videos...\"; export default PROGRESS_MESSAGE;" > ../progress.js;
+
+
+# ----- Collect URLs from gvsearch
+
+URLS+=$(yt-dlp --print webpage_url "gvsearch$1:$2")
+
+
+# ----- Download each video
+
+for URL in $URLS
+do
+
+COUNT=1
+NAMES=""
+yt-dlp -o "%(id)s.%(ext)s" --cookies-from-browser chrome -f mp4 $URL
+
+
+# ----- Add filenames to React index file
+
+if [ "$(/bin/ls ../Instagram)" ]; 
+then
+	for FILE in *;
+		do
+			echo $FILE >> ../ig_filenames.txt
+			NAMES+="video$COUNT: require('./Instagram/$FILE')," 
+			COUNT=$((COUNT+1))
+		done
+		
+		echo $NAMES_TAG$NAMES$TAG > ../igvids.js
+fi	
+done
+
+echo "const PROGRESS_MESSAGE = \"\"; export default PROGRESS_MESSAGE;" > ../progress.js;
+
