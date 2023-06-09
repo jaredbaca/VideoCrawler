@@ -12,21 +12,21 @@ From this directory, enter the command "npm start" to launch the React applicati
 
 ## Dependencies
 ### Included in Build
-spring-boot-starter-web
-spring-boot-starter-test
-tomcat-jasper: 10.1.1
-jsoup: 1.15.3
+<br>spring-boot-starter-web
+<br>spring-boot-starter-test
+<br>tomcat-jasper: 10.1.1
+<br>jsoup: 1.15.3
 ### Not included in Build
 [yt-dlp] (https://github.com/yt-dlp/yt-dlp)
-[PySceneDetect] (http://scenedetect.com/en/latest/)
-Python 3.7+ (https://www.python.org/downloads/)
-ffmpeg
+<br>[PySceneDetect] (http://scenedetect.com/en/latest/)
+<br>Python 3.7+ (https://www.python.org/downloads/)
+<br>ffmpeg
 ### Node Modules
-react-bootstrap
-Material UI
-React Icons
-React Player
-React HTML5 Video
+<br>react-bootstrap
+<br>Material UI
+<br>React Icons
+<br>React Player
+<br>React HTML5 Video
 
 ## Detailed Description
 #### Yt-dlp, Java, Shell Scripts
