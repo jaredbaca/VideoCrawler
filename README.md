@@ -12,7 +12,7 @@ From this directory, enter the command "npm start" to launch the React applicati
 
 ## Dependencies
 ### Included in Build
-<br>spring-boot-starter-web
+spring-boot-starter-web
 <br>spring-boot-starter-test
 <br>tomcat-jasper: 10.1.1
 <br>jsoup: 1.15.3
@@ -22,7 +22,7 @@ From this directory, enter the command "npm start" to launch the React applicati
 <br>Python 3.7+ (https://www.python.org/downloads/)
 <br>ffmpeg
 ### Node Modules
-<br>react-bootstrap
+react-bootstrap
 <br>Material UI
 <br>React Icons
 <br>React Player
@@ -53,29 +53,29 @@ Using the useEffect hook in my SearchBar Component allows React to respond to th
 ## Included Files
 ### Java Classes
 Constants.java
-videoRemover.java
-InstagramGoogleSearch.java
-InstagramSceneDetect.java
-BacaCss622FinalProjectApplication.java
-VideoSearchController.java
-TikTokSceneDetect.java
-TikTokSearch.java
-YouTubeSceneDetect.java
-YouTubeSearch.java
+<br>videoRemover.java
+<br>InstagramGoogleSearch.java
+<br>InstagramSceneDetect.java
+<br>BacaCss622FinalProjectApplication.java
+<br>VideoSearchController.java
+<br>TikTokSceneDetect.java
+<br>TikTokSearch.java
+<br>YouTubeSceneDetect.java
+<br>YouTubeSearch.java
 ### Shell Scripts
 igSceneDetect
-igSearch
-TTDownload
-ttSceneDetect
-ytSceneDetect
-ytSearch
+<br>igSearch
+<br>TTDownload
+<br>ttSceneDetect
+<br>ytSceneDetect
+<br>ytSearch
 ### React Components
 react-video-gallery.css
-SearchBar.js
-video.jsx
-VideoCarousel.css
-VideoCarousel.js
-VideoGallery.js
+<br>SearchBar.js
+<br>video.jsx
+<br>VideoCarousel.css
+<br>VideoCarousel.js
+<br>VideoGallery.js
 
 ### Notes
 - In order to get around the login requirements for Instagram videos, yt-dlp utilizes browser cookies. If the user has successfully logged into Instagram in Chrome, then yt-dlp uses those cookies to authenticate. The functionality of this is somewhat unreliable, and results in many failed download attempts. This does not cause any errors, but instead aborts the current download and moves on to the next. Because of this, the number of Instagram results may be much more limited than those for TikTok, and the desired results parameter should be adjusted accordingly.
@@ -89,12 +89,12 @@ VideoGallery.js
 ## Sources
 
 Packaging a React.JS Application into a Java Spring Boot Application - Wazoo Web Bytes (https://www.youtube.com/watch?v=_CLLw3QAuOE&t=1142s)
-React JS - React Tutorial for Beginners - Programming with Mosh (https://www.youtube.com/watch?v=Ke90Tje7VS0&t=1734s)
-Responsive Video Gallery in React js | Build a Video Gallery With React js | Video Gallery in React - Code With Yd (https://www.youtube.com/watch?v=B_IYFFbKkfY)
-Web App using Spring Boot - Telusko (https://www.youtube.com/watch?v=nLbvzF1-vXY&t=304s)
-yt-dlp Documentation (https://github.com/yt-dlp/yt-dlp)
-PySceneDetect Documentation (http://scenedetect.com/en/latest/)
-Material UI Guides (https://mui.com/material-ui/getting-started/usage/)
-https://www.w3schools.com
-https://developer.mozilla.org/en-US/
+<br>React JS - React Tutorial for Beginners - Programming with Mosh (https://www.youtube.com/watch?v=Ke90Tje7VS0&t=1734s)
+<br>Responsive Video Gallery in React js | Build a Video Gallery With React js | Video Gallery in React - Code With Yd (https://www.youtube.com/watch?v=B_IYFFbKkfY)
+<br>Web App using Spring Boot - Telusko (https://www.youtube.com/watch?v=nLbvzF1-vXY&t=304s)
+<br>yt-dlp Documentation (https://github.com/yt-dlp/yt-dlp)
+<br>PySceneDetect Documentation (http://scenedetect.com/en/latest/)
+<br>Material UI Guides (https://mui.com/material-ui/getting-started/usage/)
+<br>https://www.w3schools.com
+<br>https://developer.mozilla.org/en-US/
 
