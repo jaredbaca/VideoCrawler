@@ -1,4 +1,4 @@
-# CS622 FINAL PROJECT  - WEB CRAWLER
+# Video Search & Download
 ##### Author: Jared Baca
 
 Watch the video walkthrough [here](https://youtu.be/4fIpm_v3rPw)
